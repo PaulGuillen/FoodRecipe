@@ -18,16 +18,10 @@ const RecipeListScreen = () => {
     setSelectedCategory(category);
   };
 
-  // Filtra las recetas según la categoría seleccionada
   const filteredRecipes = recipeList.filter((recipe) => {
-    // Filtra por texto de búsqueda
-    if (
-      searchText &&
-      !recipe.name.toLowerCase().includes(searchText.toLowerCase())
-    ) {
+    if (searchText && !recipe.name.toLowerCase().includes(searchText.toLowerCase())) {
       return false;
     }
-    // Filtra por categoría
     if (selectedCategory && recipe.type !== selectedCategory) {
       return false;
     }
