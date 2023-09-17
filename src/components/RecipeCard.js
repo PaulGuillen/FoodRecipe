@@ -29,7 +29,9 @@ const RecipeCard = ({ searchText }) => {
             onPress={() => navigation.navigate("RecipeDetail", { item: item })}
             style={styles.pressable}
           >
-            <Image source={item.image} style={styles.image} />
+            <View style={styles.imageContainer}>
+              <Image source={item.image} style={styles.image} />
+            </View>
             <Text>{item.name}</Text>
             <View style={styles.descriptionCard}>
               <Text>{item.time}</Text>
@@ -70,11 +72,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 24,
   },
-  image: {
+  imageContainer: {
     width: 150,
     height: 150,
-    resizeMode: "center",
+    borderRadius: 75,
+    overflow: "hidden",
   },
+  image: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
+  },
+
   descriptionCard: {
     flexDirection: "row",
     marginTop: 8,
