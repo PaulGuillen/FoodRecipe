@@ -1,32 +1,37 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import React from "react";
+import { StyleSheet, TextInput, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 const SearchFilter = ({ icon, placeholder }) => {
-	return (
-		<View
-			style={{
-				backgroundColor: "#fff",
-				flexDirection: "row",
-				paddingVertical: 16,
-				borderRadius: 8,
-				paddingHorizontal: 16,
-				marginVertical: 16,
-
-				shadowColor: "#000",
-				shadowOffset: { width: 0, height: 4 },
-				shadowOpacity: 0.1,
-				shadowRadius: 7,
-			}}
-		>
-			<FontAwesome name={icon} size={20} color="#f96163" />
-			<TextInput style={{ paddingLeft: 8, fontSize: 16, color: "#808080" }}>
-				{placeholder}
-			</TextInput>
-		</View>
-	);
+  return (
+    <View style={styles.container}>
+      <View style={styles.inputWrapper}>
+        <FontAwesome name={icon} size={20} style={styles.icon} />
+        <TextInput style={styles.inputText} placeholder={placeholder} />
+      </View>
+    </View>
+  );
 };
 
 export default SearchFilter;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 20,
+  },
+  inputWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderColor: "gray",
+    borderWidth: 2,
+    borderRadius: 15,
+    backgroundColor: "white",
+  },
+  icon: {
+    padding: 20,
+  },
+  inputText: {
+    flex: 1,
+    fontSize: 18,
+    height: 40,
+  },
+});

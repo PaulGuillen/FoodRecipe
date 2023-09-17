@@ -4,9 +4,8 @@ import {
   ScrollView,
   Image,
   Text,
-  TouchableOpacity,
+  TouchableOpacity
 } from "react-native";
-
 const WelcomeScreen = ({ navigation }) => {
   return (
     <ScrollView style={styles.container}>
@@ -44,11 +43,11 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "#f96163",
-    fontSize: 22,
+    fontSize: 32,
     fontWeight: "bold",
   },
   subttile: {
-    fontSize: 40,
+    fontSize: 22,
     fontWeight: "bold",
     color: "#3c444c",
     marginTop: 20,

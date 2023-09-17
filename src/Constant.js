@@ -10,35 +10,35 @@ export const colors = {
 export const categories = [
 	{
 		id: "01",
-		category: "Breakfast",
+		category: "Desayunos",
 	},
 	{
 		id: "02",
-		category: "Lunch",
+		category: "Almuerzos",
 	},
 	{
 		id: "03",
-		category: "Dinner",
+		category: "Cenas",
 	},
 	{
 		id: "04",
-		category: "Asian",
+		category: "Asiatico",
 	},
 	{
 		id: "05",
-		category: "Italian",
+		category: "Italiano",
 	},
 	{
 		id: "06",
-		category: "Desserts",
+		category: "Postres",
 	},
 	{
 		id: "07",
-		category: "Vegetarian",
+		category: "Vegetariano",
 	},
 	{
 		id: "08",
-		category: "Seafood",
+		category: "Mariscos",
 	},
 ];
 
