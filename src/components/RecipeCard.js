@@ -1,21 +1,29 @@
 import {
-  FlatList,
   StyleSheet,
-  Text,
+  FlatList,
   View,
   Image,
+  Text,
   Pressable,
 } from "react-native";
 import { colors, recipeList } from "../Constant";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const RecipeCard = () => {
+const RecipeCard = ({ searchText }) => {
   const navigation = useNavigation();
+  let filteredRecipes = recipeList;
+
+  if (searchText) {
+    filteredRecipes = recipeList.filter((recipe) =>
+      recipe.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+  }
+
   return (
     <View style={styles.backgroundCard}>
       <FlatList
-        data={recipeList}
+        data={filteredRecipes}
         renderItem={({ item }) => (
           <Pressable
             onPress={() => navigation.navigate("RecipeDetail", { item: item })}
@@ -42,8 +50,6 @@ const RecipeCard = () => {
     </View>
   );
 };
-
-export default RecipeCard;
 
 const styles = StyleSheet.create({
   backgroundCard: {
@@ -81,3 +87,5 @@ const styles = StyleSheet.create({
     color: colors.COLOR_PRIMARY,
   },
 });
+
+export default RecipeCard;

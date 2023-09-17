@@ -4,7 +4,7 @@ import {
   ScrollView,
   Image,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 const WelcomeScreen = ({ navigation }) => {
   return (

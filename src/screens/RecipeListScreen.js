@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import Header from "../components/Header";
 import SearchFilter from "../components/SearchFilter";
@@ -5,32 +6,34 @@ import CategoriesFilter from "../components/CategoriesFilter";
 import RecipeCard from "../components/RecipeCard";
 
 const RecipeListScreen = () => {
+  const [searchText, setSearchText] = useState("");
+
+  const handleSearchTextChange = (text) => {
+    setSearchText(text);
+  };
+
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      {/* render header */}
       <Header headerText={"Hoy es "} headerIcon={"bitbucket"} />
 
-      {/* Search Filter */}
-      <SearchFilter icon="search" placeholder={"Busca la receta..."} />
+      <SearchFilter
+        icon="search"
+        placeholder={"Busca la receta..."}
+        onChangeText={handleSearchTextChange}
+      />
 
-      {/* Categories filter */}
       <View style={{ marginTop: 22 }}>
         <Text style={{ fontSize: 22, fontWeight: "bold" }}>Categorias</Text>
-        {/* Categories list */}
         <CategoriesFilter />
       </View>
 
-      {/* Recipe List Filter */}
       <View style={{ marginTop: 22, flex: 1 }}>
         <Text style={{ fontSize: 22, fontWeight: "bold" }}>Recetas</Text>
-        {/* Recipes list */}
-        <RecipeCard />
+        <RecipeCard searchText={searchText} />
       </View>
     </SafeAreaView>
   );
 };
-
-export default RecipeListScreen;
 
 const styles = StyleSheet.create({
   safeAreaView: {
@@ -39,3 +42,5 @@ const styles = StyleSheet.create({
     marginTop: 60,
   },
 });
+
+export default RecipeListScreen;
