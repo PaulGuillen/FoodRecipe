@@ -22,7 +22,6 @@ const RecipeCard = ({ searchText, selectedCategory }) => {
   }
 
   if (selectedCategory) {
-    // Filtra las recetas por la categoría seleccionada
     filteredRecipes = filteredRecipes.filter(
       (recipe) => recipe.type === selectedCategory
     );

@@ -13,13 +13,11 @@ const CategoriesFilter = ({ onSelectCategory }) => {
 
   const handleCategoryPress = (categoryType) => {
     if (localSelectedCategory === categoryType) {
-      // Si ya está seleccionada, deseleccionarla
       setLocalSelectedCategory(null);
-      onSelectCategory(null); // También deselecciona en el componente padre
+      onSelectCategory(null);
     } else {
-      // Si no está seleccionada, seleccionarla
       setLocalSelectedCategory(categoryType);
-      onSelectCategory(categoryType); // También selecciona en el componente padre
+      onSelectCategory(categoryType);
     }
   };
 

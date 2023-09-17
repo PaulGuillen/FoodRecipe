@@ -44,20 +44,20 @@ const RecipeListScreen = () => {
         onChangeText={handleSearchTextChange}
       />
 
-      <View style={{ marginTop: 22 }}>
-        <Text style={{ fontSize: 22, fontWeight: "bold" }}>Categorias</Text>
+      <View style={styles.categoryFilterView}>
+        <Text style={styles.subTitleTextView}>Categorias</Text>
         <CategoriesFilter
           selectedCategory={selectedCategory}
           onSelectCategory={handleCategoryChange}
         />
       </View>
 
-      <View style={{ marginTop: 22, flex: 1 }}>
-        <Text style={{ fontSize: 22, fontWeight: "bold" }}>Recetas</Text>
+      <View style={styles.recipeCardView}>
+        <Text style={styles.subTitleTextView}>Recetas</Text>
         <RecipeCard
           searchText={searchText}
           filteredRecipes={filteredRecipes}
-          selectedCategory={selectedCategory} // Pasa la selectedCategory como prop
+          selectedCategory={selectedCategory}
         />
       </View>
     </SafeAreaView>
@@ -69,6 +69,17 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 10,
     marginTop: 60,
+  },
+  categoryFilterView: {
+    marginTop: 20,
+  },
+  recipeCardView: {
+    flex: 1,
+    marginTop: 20,
+  },
+  subTitleTextView: {
+    fontSize: 22,
+    fontWeight: "bold",
   },
 });
 
