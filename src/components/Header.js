@@ -17,7 +17,6 @@ function getDayOfWeekSpanish(date) {
 }
 
 const Header = ({ headerText, headerIcon }) => {
-
   const currentDate = new Date();
   const dayOfWeek = getDayOfWeekSpanish(currentDate);
 
@@ -43,5 +42,6 @@ const styles = StyleSheet.create({
   iconHeader: {
     fontSize: 24,
     color: "#f96163",
+    marginEnd: 4,
   },
 });
