@@ -54,7 +54,7 @@ const RecipeDetailsScreen = ({ navigation, route }) => {
         </View>
 
         {/* Recipe Name */}
-        <Text style={{ marginTop: 150, fontSize: 28, fontWeight: "bold" }}>
+        <Text style={{ marginTop: 120, fontSize: 28, fontWeight: "bold" }}>
           {item.name}
         </Text>
 

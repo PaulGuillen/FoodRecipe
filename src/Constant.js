@@ -5,8 +5,6 @@ export const colors = {
   COLOR_DARK_ALT: "#262626",
 };
 
-//  Data for categories filter
-
 export const categories = [
   {
     id: "01",
@@ -74,6 +72,66 @@ export const recipeList = [
   },
   {
     id: "02",
+    name: "Pan con Chicharrón",
+    image: require("../assets/images/pan_chicharron.jpg"),
+    rating: "4.2",
+    type: "breakfast",
+    ingredients: [
+      "Pan francés",
+      "Chicharrón de cerdo",
+      "Camote",
+      "Salsa criolla",
+      "Mayonesa",
+      "Lechuga",
+    ],
+    time: "40 mins",
+    difficulty: "Intermedio",
+    calories: "420 cal",
+    color: "#3498db", // Color azul
+    description:
+      "Un clásico peruano que combina crujientes trozos de chicharrón de cerdo con camote, salsa criolla y mayonesa, todo servido en un pan francés fresco.",
+    steps: [
+      "Corte el pan francés por la mitad y retire parte del interior para hacer espacio para el relleno.",
+      "Rellene el pan con trozos de chicharrón de cerdo y camote previamente cocido y cortado en rodajas.",
+      "Añada una generosa porción de salsa criolla encima del chicharrón y el camote.",
+      "Agregue una capa de lechuga fresca y luego una capa de mayonesa al gusto.",
+      "Cierre el pan y presione suavemente para compactar los ingredientes.",
+      "¡Sirva su Pan con Chicharrón peruano y disfrute de esta deliciosa combinación de sabores y texturas!",
+    ],
+  },
+  {
+    id: "03",
+    name: "Panqueques",
+    image: require("../assets/images/panqueques.png"),
+    rating: "4.2",
+    type: "breakfast",
+    ingredients: [
+      "Harina de trigo",
+      "Leche",
+      "Huevos",
+      "Azúcar",
+      "Polvo de hornear",
+      "Sal",
+      "Mantequilla",
+    ],
+    time: "40 mins",
+    difficulty: "Intermedio",
+    calories: "420 cal",
+    color: "#DAA520",
+    description:
+      "Un desayuno delicioso y clásico que consiste en panqueques esponjosos, perfectos para acompañar con sirope de arce o tus ingredientes favoritos.",
+    steps: [
+      "En un tazón grande, mezcle la harina de trigo, el azúcar, el polvo de hornear y la sal.",
+      "En otro tazón, bata los huevos y luego agregue la leche y la mantequilla derretida. Mezcle bien.",
+      "Vierta la mezcla líquida en la mezcla de ingredientes secos y revuelva hasta que estén combinados. No mezcle demasiado; es normal que queden algunos grumos.",
+      "Caliente una sartén antiadherente y unte un poco de mantequilla para evitar que los panqueques se peguen.",
+      "Vierta un poco de masa en la sartén caliente para formar un panqueque. Cocine hasta que aparezcan burbujas en la superficie, luego voltee y cocine hasta que estén dorados en ambos lados.",
+      "Repita el proceso con el resto de la masa hasta que haya hecho todos los panqueques deseados.",
+      "Sirva los panqueques calientes con sirope de arce, frutas frescas, crema batida o sus ingredientes favoritos. ¡Disfrute de sus deliciosos panqueques caseros!",
+    ],
+  },
+  {
+    id: "02",
     name: "Tallarín Verde",
     image: require("../assets/images/tallarin_verde.png"),
     rating: "3.6",
@@ -101,26 +159,6 @@ export const recipeList = [
       "Añada los fideos cocidos a la salsa y mezcle bien para que estén completamente cubiertos.",
       "Sazone con sal y pimienta al gusto y cocine por unos minutos más hasta que los fideos estén bien calientes.",
       "Sirva el Tallarín Verde caliente y disfrute de esta deliciosa especialidad peruana.",
-    ],
-  },
-  {
-    id: "03",
-    name: "Hot Dog",
-    image: require("../assets/images/lasgana.png"),
-    rating: "4.6",
-    type: "dinner",
-    ingredients: ["Hot Dog Buns", "Frankfurters", "Ketchup", "Mustard"],
-    time: "40 mins",
-    difficulty: "Medium",
-    calories: "420 cal",
-    color: "#FF0000",
-    description:
-      "A classic American favorite, hot dog buns stuffed with juicy frankfurters, drizzled with ketchup and mustard for that perfect balance of flavors.",
-    steps: [
-      "Grill or heat the frankfurters until they're cooked through.",
-      "Place the frankfurters in hot dog buns.",
-      "Squeeze ketchup and mustard over the frankfurters.",
-      "Serve with your favorite sides and enjoy!",
     ],
   },
   {
@@ -287,7 +325,7 @@ export const recipeList = [
     time: "45 mins",
     difficulty: "Fácil",
     calories: "450 cal",
-    color: "#f96163",
+    color: "#006A4E",
     description:
       "Un reconfortante plato de ají de gallina, con pollo desmenuzado en una deliciosa salsa de ají amarillo, servido con papas cocidas, arroz blanco y decorado con huevos duros y aceitunas negras.",
     steps: [
@@ -297,6 +335,26 @@ export const recipeList = [
       "Añada el queso fresco desmenuzado a la mezcla y cocine hasta que se derrita completamente.",
       "Sirva el ají de gallina caliente sobre papas cocidas y arroz blanco.",
       "Decore con huevos duros en rodajas y aceitunas negras antes de servir. ¡Disfrute de su ají de gallina casero!",
+    ],
+  },
+  {
+    id: "11",
+    name: "Hot Dog",
+    image: require("../assets/images/lasgana.png"),
+    rating: "4.6",
+    type: "dinner",
+    ingredients: ["Hot Dog Buns", "Frankfurters", "Ketchup", "Mustard"],
+    time: "40 mins",
+    difficulty: "Medium",
+    calories: "420 cal",
+    color: "#FF0000",
+    description:
+      "A classic American favorite, hot dog buns stuffed with juicy frankfurters, drizzled with ketchup and mustard for that perfect balance of flavors.",
+    steps: [
+      "Grill or heat the frankfurters until they're cooked through.",
+      "Place the frankfurters in hot dog buns.",
+      "Squeeze ketchup and mustard over the frankfurters.",
+      "Serve with your favorite sides and enjoy!",
     ],
   },
 ];
